@@ -7,6 +7,7 @@ import base64
 model = YOLO('best.pt')
 
 
+
 def predict (imageByte):
     image  = Image.open(io.BytesIO(imageByte)).convert("RGB")# read the image as bytes
     result = model(image)
